@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Marker</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&callback=initMap&libraries=&v=weekly" defer></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwNAT1Ak6P62S441r-W_Mm4CTmwsi0LAc&callback=initMap&libraries=&v=weekly" defer></script>
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="./app.js"></script>
+  </head>
+  <body>
+    <div id="gmp-map"></div>
+
+    <div class="elementor-widget-container" id="locations">
+        <p><span style="color: #000000;"><strong><u>Alaska</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Fairbanks</span><a style="color: #000000; text-decoration: underline;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-DRC-flyer-Fairbanks.pdf" target="_blank" rel="noopener"><br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Connecticut</u></strong></span></p>
+        <ul>
+        <li>Hartford</li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Florida</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Miami</span><a style="color: #000000; text-decoration: underline;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-DRC-Flyer-Miami-ADOM-2022.pdf" target="_blank" rel="noopener"><br></a></li>
+        <li><a style="color: #000000; text-decoration: underline;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/08/2022-Flyer-with-Rosary-Graphic.pdf" target="_blank" rel="noopener">St. Augustine<br></a></li>
+        <li><span style="color: #000000;">Venice</span><a style="color: #000000; text-decoration: underline;" href="https://dioceseofvenice.org/diocesan-rosary-congress-oct-1-to-7/" target="_blank" rel="noopener"><br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Georgia</u></strong></span></p>
+        <ul>
+        <li><u><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/09/2022-08-24-E-Rosary-Congress-Flyer-Comm-V3-DH-Real-Presence.pdf" target="_blank" rel="noopener">Savannah</a><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/09/2022-08-24-E-Rosary-Congress-Flyer-Comm-V3-DH-Real-Presence.pdf" target="_blank" rel="noopener"><br></a></u></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Hawaii</u></strong></span></p>
+        <ul>
+        <li><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-DRC-Flyer-Final-2.pdf" target="_blank" rel="noopener">Honolulu</a><a style="color: #000000; text-decoration: underline;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-DRC-Flyer-Final-2.pdf" target="_blank" rel="noopener"><br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Iowa</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Sioux City</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Kansas</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Salina</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Louisiana</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Greater New Orleans</span></li>
+        <li><span style="color: #000000;">Shreveport<br></span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Maryland</u></strong></span></p>
+        <ul>
+        <li><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/Image.pdf" target="_blank" rel="noopener">Baltimore (Baltimore)<br></a></li>
+        <li><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-09-27-St.-Mark-Fallston.pdf" target="_blank" rel="noopener">Baltimore (Fallston)</a><a style="color: #000000; text-decoration: underline;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-09-27-St.-Mark-Fallston.pdf" target="_blank" rel="noopener"><br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Massachusetts</u></strong></span></p>
+        <ul>
+        <li><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/2023-Flyer-Stockbridge.pdf"><u>Springfield</u></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Michigan</u></strong></span></p>
+        <ul>
+        <li><u><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/Rosary-Congress-2023-Lansing.pdf"><span style="color: #000000;">Lansing</span></a></u></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Nebraska</u></strong></span></p>
+        <ul>
+        <li><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/2023-08-26-ERC-Promo-Flyer-Omaha-NE.pdf"><span style="text-decoration: underline;">Omaha (Columbus)</span><br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>New Jersey</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Metuchen</span></li>
+        <li><a href="https://www.rcan.org/rosarycongress" target="_blank" rel="noopener">Newark<br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>New York</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">New York</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>North Carolina</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Raleigh</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Ohio</u></strong></span></p>
+        <ul>
+        <li><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/Final-Flyer-Design-2023-rosary-congress.pdf"><span style="color: #000000; text-decoration: underline;">Steubenville<br></span></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Pennsylvania</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Harrisburg</span></li>
+        <li><span style="color: #000000;">Philadelphia</span></li>
+        <li><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/2023-Flyer-Pittsburgh-St-Anthony.pdf"><span style="color: #000000; text-decoration: underline;">Pittsburgh<br></span></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Rhode Island</u></strong></span></p>
+        <ul>
+        <li><a href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/document2.pdf" target="_blank" rel="noopener">Providence</a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>South Carolina</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Charleston</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Texas</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Tyler</span></li>
+        <li><span style="color: #000000;">Victoria</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Virginia</u></strong></span></p>
+        <ul>
+        <li><u><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/2023-SJTB-Publicity-Flier-1.pdf">Arlington</a></u></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>West Virginia</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Wheeling-Charleston</span><span style="color: #000000; text-decoration: underline;"><br></span></li>
+        </ul>						</div>
+        <div class="elementor-widget-container">
+                <p><span style="color: #000000;"><strong><u>Alaska</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Fairbanks</span><a style="color: #000000; text-decoration: underline;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-DRC-flyer-Fairbanks.pdf" target="_blank" rel="noopener"><br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Connecticut</u></strong></span></p>
+        <ul>
+        <li>Hartford</li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Florida</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Miami</span><a style="color: #000000; text-decoration: underline;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-DRC-Flyer-Miami-ADOM-2022.pdf" target="_blank" rel="noopener"><br></a></li>
+        <li><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/08/2022-Flyer-with-Rosary-Graphic.pdf" target="_blank" rel="noopener">St. Augustine<br></a></li>
+        <li><span style="color: #000000;">Venice</span><a style="color: #000000; text-decoration: underline;" href="https://dioceseofvenice.org/diocesan-rosary-congress-oct-1-to-7/" target="_blank" rel="noopener"><br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Georgia</u></strong></span></p>
+        <ul>
+        <li><u><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/09/2022-08-24-E-Rosary-Congress-Flyer-Comm-V3-DH-Real-Presence.pdf" target="_blank" rel="noopener">Savannah</a><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/09/2022-08-24-E-Rosary-Congress-Flyer-Comm-V3-DH-Real-Presence.pdf" target="_blank" rel="noopener"><br></a></u></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Hawaii</u></strong></span></p>
+        <ul>
+        <li><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-DRC-Flyer-Final-2.pdf" target="_blank" rel="noopener">Honolulu</a><a style="color: #000000; text-decoration: underline;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-DRC-Flyer-Final-2.pdf" target="_blank" rel="noopener"><br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Iowa</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Sioux City</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Kansas</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Salina</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Louisiana</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Greater New Orleans</span></li>
+        <li><span style="color: #000000;">Shreveport<br></span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Maryland</u></strong></span></p>
+        <ul>
+        <li><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/Image.pdf" target="_blank" rel="noopener">Baltimore (Baltimore)<br></a></li>
+        <li><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-09-27-St.-Mark-Fallston.pdf" target="_blank" rel="noopener">Baltimore (Fallston)</a><a style="color: #000000; text-decoration: underline;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-09-27-St.-Mark-Fallston.pdf" target="_blank" rel="noopener"><br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Massachusetts</u></strong></span></p>
+        <ul>
+        <li><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/2023-Flyer-Stockbridge.pdf"><u>Springfield</u></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Michigan</u></strong></span></p>
+        <ul>
+        <li><u><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/Rosary-Congress-2023-Lansing.pdf"><span style="color: #000000;">Lansing</span></a></u></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Nebraska</u></strong></span></p>
+        <ul>
+        <li><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/2023-08-26-ERC-Promo-Flyer-Omaha-NE.pdf"><span style="text-decoration: underline;">Omaha (Columbus)</span><br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>New Jersey</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Metuchen</span></li>
+        <li><a href="https://www.rcan.org/rosarycongress" target="_blank" rel="noopener">Newark<br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>New York</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">New York</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>North Carolina</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Raleigh</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Ohio</u></strong></span></p>
+        <ul>
+        <li><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/Final-Flyer-Design-2023-rosary-congress.pdf"><span style="color: #000000; text-decoration: underline;">Steubenville<br></span></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Pennsylvania</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Harrisburg</span></li>
+        <li><span style="color: #000000;">Philadelphia</span></li>
+        <li><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/2023-Flyer-Pittsburgh-St-Anthony.pdf"><span style="color: #000000; text-decoration: underline;">Pittsburgh<br></span></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Rhode Island</u></strong></span></p>
+        <ul>
+        <li><a href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/document2.pdf" target="_blank" rel="noopener">Providence</a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>South Carolina</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Charleston</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Texas</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Tyler</span></li>
+        <li><span style="color: #000000;">Victoria</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Virginia</u></strong></span></p>
+        <ul>
+        <li><u><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/2023-SJTB-Publicity-Flier-1.pdf">Arlington</a></u></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>West Virginia</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Wheeling-Charleston</span><span style="color: #000000; text-decoration: underline;"><br></span></li>
+        </ul>						</div><div class="elementor-widget-container">
+                <p><span style="color: #000000;"><strong><u>Alaska</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Fairbanks</span><a style="color: #000000; text-decoration: underline;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-DRC-flyer-Fairbanks.pdf" target="_blank" rel="noopener"><br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Connecticut</u></strong></span></p>
+        <ul>
+        <li>Hartford</li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Florida</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Miami</span><a style="color: #000000; text-decoration: underline;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-DRC-Flyer-Miami-ADOM-2022.pdf" target="_blank" rel="noopener"><br></a></li>
+        <li><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/08/2022-Flyer-with-Rosary-Graphic.pdf" target="_blank" rel="noopener">St. Augustine<br></a></li>
+        <li><span style="color: #000000;">Venice</span><a style="color: #000000; text-decoration: underline;" href="https://dioceseofvenice.org/diocesan-rosary-congress-oct-1-to-7/" target="_blank" rel="noopener"><br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Georgia</u></strong></span></p>
+        <ul>
+        <li><u><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/09/2022-08-24-E-Rosary-Congress-Flyer-Comm-V3-DH-Real-Presence.pdf" target="_blank" rel="noopener">Savannah</a><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/09/2022-08-24-E-Rosary-Congress-Flyer-Comm-V3-DH-Real-Presence.pdf" target="_blank" rel="noopener"><br></a></u></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Hawaii</u></strong></span></p>
+        <ul>
+        <li><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-DRC-Flyer-Final-2.pdf" target="_blank" rel="noopener">Honolulu</a><a style="color: #000000; text-decoration: underline;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-DRC-Flyer-Final-2.pdf" target="_blank" rel="noopener"><br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Iowa</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Sioux City</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Kansas</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Salina</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Louisiana</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Greater New Orleans</span></li>
+        <li><span style="color: #000000;">Shreveport<br></span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Maryland</u></strong></span></p>
+        <ul>
+        <li><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/Image.pdf" target="_blank" rel="noopener">Baltimore (Baltimore)<br></a></li>
+        <li><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-09-27-St.-Mark-Fallston.pdf" target="_blank" rel="noopener">Baltimore (Fallston)</a><a style="color: #000000; text-decoration: underline;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-09-27-St.-Mark-Fallston.pdf" target="_blank" rel="noopener"><br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Massachusetts</u></strong></span></p>
+        <ul>
+        <li><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/2023-Flyer-Stockbridge.pdf"><u>Springfield</u></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Michigan</u></strong></span></p>
+        <ul>
+        <li><u><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/Rosary-Congress-2023-Lansing.pdf"><span style="color: #000000;">Lansing</span></a></u></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Nebraska</u></strong></span></p>
+        <ul>
+        <li><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/2023-08-26-ERC-Promo-Flyer-Omaha-NE.pdf"><span style="text-decoration: underline;">Omaha (Columbus)</span><br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>New Jersey</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Metuchen</span></li>
+        <li><a href="https://www.rcan.org/rosarycongress" target="_blank" rel="noopener">Newark<br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>New York</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">New York</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>North Carolina</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Raleigh</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Ohio</u></strong></span></p>
+        <ul>
+        <li><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/Final-Flyer-Design-2023-rosary-congress.pdf"><span style="color: #000000; text-decoration: underline;">Steubenville<br></span></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Pennsylvania</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Harrisburg</span></li>
+        <li><span style="color: #000000;">Philadelphia</span></li>
+        <li><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/2023-Flyer-Pittsburgh-St-Anthony.pdf"><span style="color: #000000; text-decoration: underline;">Pittsburgh<br></span></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Rhode Island</u></strong></span></p>
+        <ul>
+        <li><a href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/document2.pdf" target="_blank" rel="noopener">Providence</a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>South Carolina</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Charleston</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Texas</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Tyler</span></li>
+        <li><span style="color: #000000;">Victoria</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Virginia</u></strong></span></p>
+        <ul>
+        <li><u><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/2023-SJTB-Publicity-Flier-1.pdf">Arlington</a></u></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>West Virginia</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Wheeling-Charleston</span><span style="color: #000000; text-decoration: underline;"><br></span></li>
+        </ul>						</div><div class="elementor-widget-container">
+                <p><span style="color: #000000;"><strong><u>Alaska</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Fairbanks</span><a style="color: #000000; text-decoration: underline;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-DRC-flyer-Fairbanks.pdf" target="_blank" rel="noopener"><br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Connecticut</u></strong></span></p>
+        <ul>
+        <li>Hartford</li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Florida</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Miami</span><a style="color: #000000; text-decoration: underline;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-DRC-Flyer-Miami-ADOM-2022.pdf" target="_blank" rel="noopener"><br></a></li>
+        <li><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/08/2022-Flyer-with-Rosary-Graphic.pdf" target="_blank" rel="noopener">St. Augustine<br></a></li>
+        <li><span style="color: #000000;">Venice</span><a style="color: #000000; text-decoration: underline;" href="https://dioceseofvenice.org/diocesan-rosary-congress-oct-1-to-7/" target="_blank" rel="noopener"><br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Georgia</u></strong></span></p>
+        <ul>
+        <li><u><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/09/2022-08-24-E-Rosary-Congress-Flyer-Comm-V3-DH-Real-Presence.pdf" target="_blank" rel="noopener">Savannah</a><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/09/2022-08-24-E-Rosary-Congress-Flyer-Comm-V3-DH-Real-Presence.pdf" target="_blank" rel="noopener"><br></a></u></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Hawaii</u></strong></span></p>
+        <ul>
+        <li><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-DRC-Flyer-Final-2.pdf" target="_blank" rel="noopener">Honolulu</a><a style="color: #000000; text-decoration: underline;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-DRC-Flyer-Final-2.pdf" target="_blank" rel="noopener"><br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Iowa</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Sioux City</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Kansas</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Salina</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Louisiana</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Greater New Orleans</span></li>
+        <li><span style="color: #000000;">Shreveport<br></span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Maryland</u></strong></span></p>
+        <ul>
+        <li><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/Image.pdf" target="_blank" rel="noopener">Baltimore (Baltimore)<br></a></li>
+        <li><a style="color: #000000;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-09-27-St.-Mark-Fallston.pdf" target="_blank" rel="noopener">Baltimore (Fallston)</a><a style="color: #000000; text-decoration: underline;" href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/2022-09-27-St.-Mark-Fallston.pdf" target="_blank" rel="noopener"><br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Massachusetts</u></strong></span></p>
+        <ul>
+        <li><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/2023-Flyer-Stockbridge.pdf"><u>Springfield</u></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Michigan</u></strong></span></p>
+        <ul>
+        <li><u><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/Rosary-Congress-2023-Lansing.pdf"><span style="color: #000000;">Lansing</span></a></u></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Nebraska</u></strong></span></p>
+        <ul>
+        <li><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/2023-08-26-ERC-Promo-Flyer-Omaha-NE.pdf"><span style="text-decoration: underline;">Omaha (Columbus)</span><br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>New Jersey</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Metuchen</span></li>
+        <li><a href="https://www.rcan.org/rosarycongress" target="_blank" rel="noopener">Newark<br></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>New York</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">New York</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>North Carolina</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Raleigh</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Ohio</u></strong></span></p>
+        <ul>
+        <li><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/Final-Flyer-Design-2023-rosary-congress.pdf"><span style="color: #000000; text-decoration: underline;">Steubenville<br></span></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Pennsylvania</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Harrisburg</span></li>
+        <li><span style="color: #000000;">Philadelphia</span></li>
+        <li><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/2023-Flyer-Pittsburgh-St-Anthony.pdf"><span style="color: #000000; text-decoration: underline;">Pittsburgh<br></span></a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Rhode Island</u></strong></span></p>
+        <ul>
+        <li><a href="https://www.rosarycongressusa.org/wp-content/uploads/2022/10/document2.pdf" target="_blank" rel="noopener">Providence</a></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>South Carolina</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Charleston</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Texas</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Tyler</span></li>
+        <li><span style="color: #000000;">Victoria</span></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>Virginia</u></strong></span></p>
+        <ul>
+        <li><u><a href="https://www.rosarycongressusa.org/wp-content/uploads/2023/08/2023-SJTB-Publicity-Flier-1.pdf">Arlington</a></u></li>
+        </ul>
+        <p><span style="color: #000000;"><strong><u>West Virginia</u></strong></span></p>
+        <ul>
+        <li><span style="color: #000000;">Wheeling-Charleston</span><span style="color: #000000; text-decoration: underline;"><br></span></li>
+        </ul>
+    </div>
+  </body>
+</html>
