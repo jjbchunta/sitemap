@@ -10,9 +10,7 @@ When enabling APIs, make sure to get both the Maps JavaScript API and Places API
 # Source
  If you want to get a look at what the resulting map looks like, you can run the index.html file after cloning this repository.
 
-With that being said, there are only two files of interest within the /src directory, that being:
-    * app.js
-    * finder.py
+With that being said, there are only two files of interest within the /src directory, that being app.js, and finder.py.
 
 The app.js file is the JavaScript that initializes the map and adds the markers to the desired locations. This is the script you want to add to your website's files.
 
