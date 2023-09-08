@@ -11,8 +11,8 @@ When enabling APIs, make sure to get both the Maps JavaScript API and Places API
  If you want to get a look at what the resulting map looks like, you can run the index.html file after cloning this repository.
 
 With that being said, there are only two files of interest within the /src directory, that being:
-    1.) app.js
-    2.) finder.py
+    * app.js
+    * finder.py
 
 The app.js file is the JavaScript that initializes the map and adds the markers to the desired locations. This is the script you want to add to your website's files.
 
@@ -36,7 +36,7 @@ For configutation, if you do want to use this, you will need to paste your API k
 # How to Implement
  There are only two things you need to change about the page.
 
-1.) Paste the HTML tags below into the desired page.
+**1.) Paste the HTML tags below into the desired page.**
 
 ```html
 <script src="https://maps.googleapis.com/maps/api/js?key=[YOUR_API_KEY_HERE]&callback=initMap&libraries=&v=weekly" defer></script>
@@ -51,7 +51,7 @@ Alternatively, something that you can do if you don't want to inject HTML into t
 Within the first script tag, there is a [YOUR_API_KEY_HERE] that you need to replace with the API key you set-up within the Cloud Console.
 Secondly, there is the app.js file that you want to reference here in that second script tag.
 
-2.) (Optional) Add an ID to the div tag containing all the locations.
+**2.) (Optional) Add an ID to the div tag containing all the locations.**
 
 Unless you'd prefer to manually get the coordinates of any locations you add, the way the Python file works is searching for a div tag with the id "Locations". It will then parse all the tags within it and scrap for links and text.
 

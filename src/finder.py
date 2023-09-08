@@ -3,7 +3,7 @@ import re
 import os
 from array import *
 
-api_key = "AIzaSyBwNAT1Ak6P62S441r-W_Mm4CTmwsi0LAc"
+api_key = "YOUR_API_KEY"
 
 # Check every line of the HTML file
 locations = []
